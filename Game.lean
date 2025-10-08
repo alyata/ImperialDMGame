@@ -1,11 +1,14 @@
-import Game.Levels.DemoWorld
+import Game.Levels.ReasoningWorld
 
 -- Here's what we'll put on the title screen
-Title "Hello World Game"
+Title "Discrete Math Game @ Imperial Computing"
 Introduction
 "
-This text appears on the starting page where one selects the world/level to play.
-You can use **markdown**.
+# Welcome to the Discrete Math Game!
+
+This is the companion game to the Discrete Math course for first-year computing students. In the course, you learn to construct correct English proofs of mathematical statements about sets. In this game, you will instead learn to write proofs in the language of the proof assistant *Lean*. Lean is able to check the correctness of your proofs, allowing you to quickly and correctly prototype proofs.
+
+## Disclaimer: this game supplements your learning, but does not replace attendance of lectures or reading the notes.
 "
 
 Info "
