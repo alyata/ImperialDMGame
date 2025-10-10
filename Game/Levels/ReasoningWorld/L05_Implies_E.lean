@@ -5,7 +5,7 @@ Level 5
 
 Title "Using Implies"
 
-Introduction "Suppose `h : P → Q` and `p : P`. To prove `Q` write `use_imp h p`."
+Introduction "Suppose `h : P → Q` and `p : P`. To prove `Q` write `use_imp h, p`."
 
 Statement (P Q : Prop) (h : P → Q) (p : P) : Q := by
   use_imp h, p
