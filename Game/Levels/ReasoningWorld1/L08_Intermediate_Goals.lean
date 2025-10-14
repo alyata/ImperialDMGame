@@ -16,3 +16,8 @@ Statement (P Q R : Prop) (pq : P → Q) (qr : Q → R): P → R := by
   use_imp qr, q
 
 Conclusion "Due to a limitation of the web UI, you will have to write the proof of the intermediate goals in one line, so try to make easily reachable intermediate goals! By the way, intermediate goals in maths are called 'lemmas'."
+
+/-- The tactic `have q : Q := by INSERT_YOUR_PROOF_OF_Q_HERE` introduces a new assumption `q : Q`. Due to a limitation of the web UI, you will have to write the proof of the intermediate goals in one line, so try to make easily reachable intermediate goals!
+-/
+TacticDoc «have»
+NewTactic «have»

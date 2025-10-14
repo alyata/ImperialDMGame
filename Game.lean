@@ -17,7 +17,7 @@ Info "
 
 Thank you for playing the Discrete Math game. If you have any **questions**, **feedback**, **thoughts** or **issues** to report please do not hesitate to post on EdStem or email alyssa.renata19@imperial.ac.uk! All feedback is greatly appreciated.
 
-Special Thanks to Mohammad Kala and Aurelia for testing the game at various phases!
+Special Thanks to Zhixuan Yang, Mohammad Kala and Aurelia Kepke-Wysocki for testing the game at various phases!
 "
 
 /-! Information to be displayed on the servers landing page. -/
