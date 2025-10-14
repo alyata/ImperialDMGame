@@ -5,15 +5,15 @@ Level 1
 
 Title "Proving by Assumption"
 
-Introduction "Proofs are carried out by writing down proof steps or *tactics* in sequence. The first tactic we learnt about is for proving a statement by assumption."
+Introduction "Proofs are carried out by writing down proof steps or *tactics* in sequence. Your first tactic is for proving a statement by assumption."
 
 Statement (P : Prop) (p : P) : P := by
   Hint "`P : Prop` means that `P` is a proposition/statement."
   Hint "`p` is the assumption that `P` holds."
-  Hint "To prove `P` from the assumption, write `exact p`, which means the goal follows from the assumption named `p`."
+  Hint "To prove `P` from the assumption, write `exact p`, which means the goal is 'exactly' the same as the assumption named `p`."
   exact p
 
--- Conclusion "This last message appears if the level is solved."
+Conclusion "Note that the `p` is just an arbitrary name, which we use to refer to the assumption that `P` holds. It could equally well have been `panda : P`."
 
 /- Use these commands to add items to the game's inventory. -/
 

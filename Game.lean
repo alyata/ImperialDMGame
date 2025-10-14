@@ -1,4 +1,4 @@
-import Game.Levels.ReasoningWorld
+import Game.Levels.ReasoningWorld1
 
 -- Here's what we'll put on the title screen
 Title "Discrete Math Game @ Imperial Computing"
@@ -12,12 +12,11 @@ This is the companion game to the Discrete Math course for first-year computing 
 "
 
 Info "
-Here you can put additional information about the game. It is accessible
-from the starting through the drop-down menu.
+## Discrete Math Game @ Imperial Computing
 
-For example: Game version, Credits, Link to Github and Zulip, etc.
+Thank you for playing the Discrete Math game. If you have any **questions**, **feedback**, **thoughts** or **issues** to report please do not hesitate to post on EdStem or email alyssa.renata19@imperial.ac.uk! All feedback is greatly appreciated.
 
-Use **markdown**.
+Special Thanks to Mohammad Kala and Aurelia for testing the game at various phases!
 "
 
 /-! Information to be displayed on the servers landing page. -/
