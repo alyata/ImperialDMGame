@@ -1,6 +1,6 @@
 import Game.Metadata
 
-World "ReasoningWorld"
+World "ReasoningWorld1"
 Level 4
 
 Title "Showing Implies"
@@ -12,14 +12,17 @@ Statement (P Q : Prop) : P → P := by
   Hint "Notice that the goal has changed. Can you prove the new goal now?"
   exact p
 
--- Conclusion "This last message appears if the level is solved."
-
-/- Use these commands to add items to the game's inventory. -/
-
 /-- If the goal is `P -> Q`, then `assume p` creates the new assumption `p : P` and changes the goal to proving `Q`. -/
 TacticDoc assume
 /-- A synonym for `assume`.-/
 TacticDoc show_imp
 NewTactic assume show_imp
--- NewTheorem Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq
+
+/-- `P → Q` means "`P` implies `Q`". To enter the symbol `→`, type `\imp`.
+
+If your goal is `P → Q`, assume `P` and try to prove `Q`.
+
+If you have `pq : P → Q`, the `use_imp` tactic will let you use `pq` along with some `p : P` to derive `Q`.
+-/
+DefinitionDoc Imp as "→"
+NewDefinition Imp

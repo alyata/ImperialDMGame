@@ -9,7 +9,7 @@ import Game.Levels.ReasoningWorld1.L08_Intermediate_Goals
 import Game.Levels.ReasoningWorld1.L09_Complex_Intermediate_Goals
 import Game.Levels.ReasoningWorld1.L010_Boss
 
-World "ReasoningWorld"
+World "ReasoningWorld1"
 Title "Mathematical Reasoning 1"
 
 Introduction "

@@ -1,6 +1,6 @@
 import Game.Metadata
 
-World "ReasoningWorld"
+World "ReasoningWorld1"
 Level 1
 
 Title "Proving by Assumption"

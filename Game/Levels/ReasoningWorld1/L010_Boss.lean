@@ -1,6 +1,6 @@
 import Game.Metadata
 
-World "ReasoningWorld"
+World "ReasoningWorld1"
 Level 10
 
 Title "Boss Fight!"

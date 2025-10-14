@@ -1,4 +1,5 @@
 import Game.Levels.ReasoningWorld1
+import Game.Levels.ReasoningWorld2
 
 -- Here's what we'll put on the title screen
 Title "Discrete Math Game @ Imperial Computing"
@@ -21,8 +22,8 @@ Special Thanks to Mohammad Kala and Aurelia for testing the game at various phas
 
 /-! Information to be displayed on the servers landing page. -/
 Languages "en"
-CaptionShort "Game Template"
-CaptionLong "You should use this game as a template for your own game and add your own levels."
+CaptionShort "Imperial DM Game"
+CaptionLong "Discrete Math Game for first-year students at Imperial College's Department of Computing."
 -- Prerequisites "" -- add this if your game depends on other games
 -- CoverImage "images/cover.png"
 

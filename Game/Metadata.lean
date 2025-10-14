@@ -11,12 +11,20 @@ macro "show_imp" args:(colGt ident)* : tactic =>
 syntax "show_and" term "," term : tactic
 syntax "use_and_L" term : tactic
 syntax "use_and_R" term : tactic
+syntax "show_or_L" term : tactic
+syntax "show_or_R" term : tactic
 syntax "use_imp" term "," term : tactic
+syntax "contradict" term "," term : tactic
+syntax "use_or" Lean.Parser.Tactic.elimTarget "as" colGt ident "," colGt ident : tactic
 macro_rules
-  | `(tactic| show_and $p, $q) => `(tactic|exact And.intro $p $q)
-  | `(tactic| use_and_L $pq) => `(tactic|exact And.left $pq)
-  | `(tactic| use_and_R $pq) => `(tactic|exact And.right $pq)
-  | `(tactic| use_imp $p, $q) => `(tactic|exact $p $q)
+  | `(tactic| show_and $p, $q)     => `(tactic|exact And.intro $p $q)
+  | `(tactic| use_and_L $pq)       => `(tactic|exact And.left $pq)
+  | `(tactic| use_and_R $pq)       => `(tactic|exact And.right $pq)
+  | `(tactic| use_imp $p, $q)      => `(tactic|exact $p $q)
+  | `(tactic| contradict $p, $q)   => `(tactic|exact False.elim ($p $q))
+  | `(tactic| show_or_L $p)        => `(tactic|exact Or.inl $p)
+  | `(tactic| show_or_R $q)        => `(tactic|exact Or.inr $q)
+  | `(tactic| use_or $h as $p, $q) => `(tactic |rcases $h with $p | $q)
 
 /-! Use this file to add things that should be available in all levels.
 
