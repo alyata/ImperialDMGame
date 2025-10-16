@@ -3,6 +3,8 @@ import Game.Metadata
 World "ReasoningWorld1"
 Level 10
 
+set_option pp.parens true
+
 Title "Boss Fight!"
 
 Introduction "Can you beat the boss of this world? Good luck!"
