@@ -7,7 +7,12 @@ macro "assume" args:(colGt ident)* : tactic =>
   `(tactic| intro $args*)
 macro "show_imp" args:(colGt ident)* : tactic =>
   `(tactic| intro $args*)
+-- macro "by_contra" arg:(colGt ident) : tactic =>
+--   `(tactic| apply Classical.byContradiction; assume $arg)
 
+-- syntax "assume" ident* : tactic
+-- syntax "show_imp" ident* : tactic
+syntax "by_contra" ident : tactic
 syntax "show_and" term "," term : tactic
 syntax "use_and_L" term : tactic
 syntax "use_and_R" term : tactic
@@ -17,6 +22,9 @@ syntax "use_imp" term "," term : tactic
 syntax "contradict" term "," term : tactic
 syntax "use_or" Lean.Parser.Tactic.elimTarget "as" colGt ident "," colGt ident : tactic
 macro_rules
+  -- | `(tactic| assume $ps*)         => `(tactic|intro $ps*)
+  -- | `(tactic| show_imp $ps*)       => `(tactic|intro $ps*)
+  | `(tactic| by_contra $p)        => `(tactic| apply Classical.byContradiction; assume $p)
   | `(tactic| show_and $p, $q)     => `(tactic|exact And.intro $p $q)
   | `(tactic| use_and_L $pq)       => `(tactic|exact And.left $pq)
   | `(tactic| use_and_R $pq)       => `(tactic|exact And.right $pq)
