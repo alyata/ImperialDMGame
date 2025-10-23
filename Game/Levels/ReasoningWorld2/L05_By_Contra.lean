@@ -8,7 +8,7 @@ Title "Proof by Contradiction"
 Introduction "To prove `Q`, you can always assume `nq : ¬Q` in order to reach a contradiction. You can do this with the tactic `by_contra nq` - give it a shot now!"
 
 Statement (P Q : Prop) (nqnp : ¬Q → ¬P)  : P → Q := by
-  intro p
+  assume p
   by_contra nq
   have np : ¬ P := by use_imp nqnp, nq
   contradict np, p
