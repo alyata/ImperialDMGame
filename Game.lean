@@ -1,5 +1,6 @@
 import Game.Levels.ReasoningWorld1
 import Game.Levels.ReasoningWorld2
+import Game.Levels.TypesWorld
 
 -- Here's what we'll put on the title screen
 Title "Discrete Math Game @ Imperial Computing"

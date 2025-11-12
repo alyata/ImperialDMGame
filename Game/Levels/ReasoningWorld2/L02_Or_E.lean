@@ -20,5 +20,6 @@ Conclusion "In practice, you may choose more informative or convenient names `p`
 /-- If the current goal is `R` and `pq : P ∨ Q`, the tactic `use_or pq as p, q` replaces the current goal with two goals to prove `R`. The assumption `pq` is replaced by `p : P` in the first goal, and by `q : Q` in the second goal. -/
 TacticDoc use_or
 NewTactic use_or
--- NewTheorem Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq
+
+
+NewHiddenTactic «as»
