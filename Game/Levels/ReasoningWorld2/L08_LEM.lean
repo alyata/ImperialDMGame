@@ -12,9 +12,12 @@ TacticDoc by_cases
 DisabledTactic by_cases
 
 /-- If `P : Prop` is a proposition, then `lem P : P ∨ ¬P`. -/
+TheoremDoc lem as "lem" in "Propositional Logic"
+
+/-- If `P : Prop` is a proposition, then `lem P : P ∨ ¬P`. -/
 Statement lem (P : Prop) : P ∨ ¬ P := by
 Hint "Feel free to move on to other levels! In practice you will be using `by_cases` instead of `lem` directly, so unlocking `lem` is just a nice little bonus for the completionists."
-by_contra n
+by_contr n
 Hint "try proving `¬P`..."
 Hint "you might want to switch on editor mode -- this lets you edit your proof line-by-line. This way, Lean can help you even inside a `have` proof.)"
 have np : ¬ P := by assume p; (have nn : P ∨ ¬ P := by show_or_L p); contradict n,nn

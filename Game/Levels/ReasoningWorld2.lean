@@ -8,7 +8,7 @@ import Game.Levels.ReasoningWorld2.L07_De_Morgan_2
 import Game.Levels.ReasoningWorld2.L08_LEM
 
 World "ReasoningWorld2"
-Title "Mathematical Reasoning 2"
+Title "Propositional Reasoning 2"
 
 Introduction "
 Welcome to the Mathematical Reasoning World 2! In this world we learn to prove mathematical statements involving `∨` and `¬`.

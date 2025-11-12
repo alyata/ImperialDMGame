@@ -10,7 +10,7 @@ import Game.Levels.ReasoningWorld1.L09_Complex_Intermediate_Goals
 import Game.Levels.ReasoningWorld1.L010_Boss
 
 World "ReasoningWorld1"
-Title "Mathematical Reasoning 1"
+Title "Propositional Reasoning 1"
 
 Introduction "
 Welcome to Mathematical Reasoning World 1! In this world we learn the basics of proving mathematical statements in Lean via a slice-of-life adventure. Click \"Next →\" to begin!

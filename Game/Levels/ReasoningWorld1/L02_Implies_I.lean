@@ -26,9 +26,9 @@ NewTactic assume show_imp
 
 /-- `P → Q` means "`P` implies `Q`". To enter the symbol `→`, type `\imp`.
 
-If your goal is `P → Q`, assume `P` and try to prove `Q`.
+If your goal is `P → Q`, use the tactic `assume p : P` and then try to prove `Q`.
 
-If you have `pq : P → Q`, the `use_imp` tactic will let you use `pq` along with some `p : P` to derive `Q`.
+If you have assumptions `pq : P → Q` and `p : P`, the `use_imp pq, p` tactic will let you prove `Q`.
 -/
 DefinitionDoc Imp as "→"
 NewDefinition Imp
