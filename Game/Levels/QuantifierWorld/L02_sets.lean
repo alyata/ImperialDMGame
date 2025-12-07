@@ -21,7 +21,9 @@ Conclusion "Nice!"
 /- Use these commands to add items to the game's inventory. -/
 
 /--
-If you have an object `x : A` and a set `X : Set A`, then the proposition `x ∈ X` expresses `x` being an element of `X`. This is a primitive proposition, it is not defined in terms of other propositions.
+If you have an object `x : A` and a set `X : Set A`, then the proposition `x ∈ X` or `Set.Mem x X` expresses `x` being an element of `X`. Use `\in` to type `∈`.
+
+This is a primitive proposition, it is not defined in terms of other propositions (actually this is a lie, but it is true for the purposes of the game -- you should not need to `unfold Set.Mem`).
 -/
-DefinitionDoc «∈» as "∈"
+DefinitionDoc «∈» as "Set.Mem / ∈" in "Set"
 NewDefinition «∈»

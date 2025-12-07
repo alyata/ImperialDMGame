@@ -33,7 +33,7 @@ NewTactic arbitrary
 /--
 `∀ x : A, P(x)` means  \"for each `a : A`, the proposition `P(a)` holds\". To enter the symbol `∀`, type `\forall`.
 
-If your goal is `∀ x : A, P(x)`, use the tactic `arbitrary a : A` and then try to prove `P(a)`.
+If your goal is `∀ x : A, P(x)`, use the tactic `arbitrary a`. This gives you a new object `a : A` (the arbitrary object) and replaces the goal with `P(a)`. You are free to choose the name `a` for this arbitrary object.
 
 If you have an assumption `h : ∀ x : A, P(x)` and an object `a : A`, the tactic `use_forall h, a` allows you to prove `P(a)`.
 -/

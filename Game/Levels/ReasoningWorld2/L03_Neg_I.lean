@@ -18,7 +18,7 @@ Statement (P Q R : Prop) (pq : P → Q) (pr : P → R) (rnq : R → ¬ Q)  : ¬ 
 
 /- Use these commands to add items to the game's inventory. -/
 
-/-- If you have `nq : ¬ Q` and `q : Q`, then the tactic `contradict nq, q` derives a contradiction. -/
+/-- If you have `nq : ¬ Q` and `q : Q`, then the tactic `contradict nq, q` derives a contradiction. This tactic proves any goal. -/
 TacticDoc contradict
 NewTactic contradict
 

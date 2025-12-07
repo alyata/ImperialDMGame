@@ -5,7 +5,7 @@ Level 8
 
 Title "Optional Challenge: Prove the Law of Excluded Middle"
 
-Introduction "In the course, you are given the law of excluded middle (LEM) as a basic axiom, and earlier I gave you `by_cases` as a primitive tactic. But in fact you can prove LEM just from judicious use of proof by contradiction! This is a rare example of when you genuinely need proof by contradiction."
+Introduction "In the course, you are given the law of excluded middle (LEM) as a basic axiom, and earlier I gave you `by_cases` as a primitive tactic. But in fact you can prove the LEM without `by_cases`, just from judicious use of proof by contradiction! This is a rare example of when you genuinely need proof by contradiction."
 
 /-- You can't use this, that would be cheating!  -/
 TacticDoc by_cases
@@ -24,4 +24,4 @@ have np : ¬ P := by assume p; (have nn : P ∨ ¬ P := by show_or_L p); contrad
 have nn : P ∨ ¬ P := by show_or_R np
 contradict n,nn
 
-Conclusion "Well done! You may now use the theorem `lem P`. Note that `lem P` is not a tactic, but a theorem. You can use it in places where a proof of a proposition is needed. For example, the tactics `by_cases h : P` and `use_or (lem P) as h, h` does the same thing. In practice"
+Conclusion "Well done! You may now use the theorem `lem P`. Note that `lem P` is not a tactic, but a theorem. You can use it in places where a proof of a proposition is needed. For example, the tactics `by_cases h : P` and `use_or (lem P) as h, h` does the same thing. In practice, you should never need to use `lem`, the `by_cases` tactic will suffice."
