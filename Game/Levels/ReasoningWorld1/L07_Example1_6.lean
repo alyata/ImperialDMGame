@@ -5,7 +5,7 @@ Level 7
 
 Title "Example 1.6"
 
-Introduction "It is Friday! You finish your last lecture lecture and look at your phone. It looks like your mates are gathering at the pub. You realize this is a good opportunity to learn Discrete Math, so you head there as well!
+Introduction "It is Friday! You finish your last lecture and look at your phone. It looks like your mates are gathering at the pub. You realize this is a good opportunity to learn Discrete Math, so you head there as well!
 
 Your friend, who is a completely normal human being, says to you at the party:
 

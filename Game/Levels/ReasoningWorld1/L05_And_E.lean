@@ -9,7 +9,7 @@ Introduction "PANICK! The chef has accidentally mixed all the beef bulgogi with 
 
 Because you have been going to yoga, you decide to take a deep breath and calm down. You suddenly remember the wise words of your manager (who has by now long vanished):
 
-\"To prove `P` write `use_and_L pq`. Similarly, to prove `Q` write `use_and_R pq`.\"
+\"Sometimes in life one is faced with `pq : P ∧ Q`. To prove `P` write `use_and_L pq`. Similarly, to prove `Q` write `use_and_R pq`.\"
 
 You realize this lets you separate the `beef_bulgogi` from the `mess`!"
 

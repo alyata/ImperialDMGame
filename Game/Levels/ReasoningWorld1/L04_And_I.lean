@@ -5,7 +5,7 @@ Level 4
 
 Title "Showing And"
 
-Introduction "You got a part-time job at Kokoro. Congratulations! A customer is now asking for a `katsu_curry` and a `pumpkin_croquette`. So your goal is to give them `katsu_curry ∧ pumpkin_croquette`.
+Introduction "You got a part-time job at Kokoro. Congratulations! A customer is now asking for a `katsu_curry` and a `pumpkin_croquette`. So your goal is to give them `katsu_curry ∧ pumpkin_croquette` (the symbol `∧` stands for 'and').
 
 Your manager comes up to you with a stern face and says to you: \"If you have assumptions `p : P` and `q : Q`, to prove `P ∧ Q`, use the tactic `show_and p, q`. Now go make me money.\"
 "
