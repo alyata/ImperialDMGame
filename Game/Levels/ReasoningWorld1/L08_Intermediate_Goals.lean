@@ -17,7 +17,7 @@ Statement (wood wood_block stick : Prop) (wood_block_recipe : wood → wood_bloc
   Hint "Huzzah! This introduces a new assumption `{wb} : wood_block` which you can now use. Now you feel more confident to craft your `stick`."
   use_imp stick_recipe, wb
 
-Conclusion "MESSAGE FROM DEV: Due to a limitation of the web UI, you will have to write the proof of the intermediate goals in one line, so try to make easily reachable intermediate goals! If you really need to use multiple tactics, use `;` to separate them.
+Conclusion "MESSAGE FROM DEVELOPER: Due to a limitation of the web UI, you will have to write the proof of the intermediate goals in one line, so try to make easily reachable intermediate goals! If you really need to use multiple tactics, use `;` to separate them.
 
 For example, `have pp : P → P := by assume p; exact p`."
 

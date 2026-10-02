@@ -13,5 +13,7 @@ World "ReasoningWorld2"
 Title "Propositional Reasoning 2"
 
 Introduction "
-Welcome to the Mathematical Reasoning World 2! In this world we learn to prove mathematical statements involving `∨` and `¬`.
+You are a defense attorney, and have been tasked with defending a suspect! Your job is to inspect the evidence, reconstruct the scenario, and ultimately prove the suspect innocent in court.
+
+(This world is a thinly veiled attempt to get you to learn about proving mathematical statements involving disjunction (`∨`) and negation (`¬`))
 "

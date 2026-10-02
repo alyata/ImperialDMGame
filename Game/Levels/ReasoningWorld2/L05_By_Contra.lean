@@ -7,6 +7,8 @@ Title "Proof by Contradiction"
 
 Introduction "To prove `Q`, you can always assume `nq : ¬Q` in order to reach a contradiction. You can do this with the tactic `by_contr nq` - give it a shot now!"
 
+"Your honour, suppose the defendant didn't really find the coat lying around. Then why would he "
+
 Statement (P Q : Prop) (nqnp : ¬Q → ¬P)  : P → Q := by
   assume p
   by_contr nq
