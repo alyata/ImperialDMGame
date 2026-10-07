@@ -12,7 +12,7 @@ However, after crying for a while, you think: hang on, the proof of `P → P` is
 
 Statement (P : Prop): P → P := by
 Hint "The lambda expression in Lean is quite similar to the one in Haskell. It is written as `λ x => f(x)`. To get the `λ` symbol, type `\\lambda`."
-Hint "Use `exact (λ h => h)` to "
-exact (λ h => h)
+Hint "Use `by_ass (λ h => h)` to "
+by_ass (λ h => h)
 
-OnlyTactic exact
+OnlyTactic by_ass

@@ -11,7 +11,7 @@ To prove `∃ a : A, P(a)`, use the tactic `show_exists w, p` where `w : A` is t
 
 Statement : ∃ a : ℕ, a + 10 = 12 := by
   Hint "In this case, you probably want to take your witness to be `2`, and have to prove a lemma `2 + 10 = 12`. In this case, Lean is smart enough to figure out `2 + 10` computes to `12`, so you can prove your lemma using `rfl`!"
-  have yay : 2 + 10 = 12 := by exact rfl
+  have yay : 2 + 10 = 12 := by by_ass rfl
   show_exists 2, yay
 
 Conclusion "In general, `rfl` can be used to prove two things that are equal up to performing some elementary \"calculations\"."

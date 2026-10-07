@@ -8,18 +8,16 @@ Title "Set Inclusion"
 Introduction "
 Prove that every set of natural numbers is a subset of iself.
 
-If we have two sets `X, Y : Set A`, then `X ⊆ Y` if `∀ x : A, x ∈ X → x ∈ Y`. When writing a pen-and-paper proof, you have to unfold definitions explicitly. But lean is smart enough to 'see through' definitions, so here, even though your goal is `X ⊆ X`, lean will also treat it as if your goal is just `∀ x : ℕ, x ∈ X → x ∈ X`.
-
-Try this now by taking an `arbitrary a`.
+If we have two sets `X, Y : Set A`, then `X ⊆ Y` _by definition_ says that  `∀ x : A, x ∈ X → x ∈ Y`. In Lean, I've provided a new tactic called `by_def`, which allows you to do this sort of unfolding. So if you try applying `by_def Set.subset_def`, Lean will replace the goal `X ⊆ X` by `∀ x : ℕ, x ∈ X → x ∈ X`. The definition of subset is encoded in the theorem `Set.subset_def`. Try it now!
 "
 
 Statement {X : Set ℕ} : X ⊆ X := by
   by_def Set.subset_def
   arbitrary a
   assume h
-  exact h
+  by_ass h
 
-Conclusion "Nice! I've also provided a new tactic called `by_def`, and a theorem `Set.subset_def` to use. If you start over, `by_def Set.subset_def` will replace the goal `X ⊆ X` by `∀ x : ℕ, x ∈ X → x ∈ X`. This is useful when you are having trouble keeping track of the definitions in your head, but you don't have to use it. Try it now!"
+Conclusion "Nice! When writing a pen-and-paper proof, you have to unfold definitions explicitly. But in lean the `by_def` is actually optional because lean is smart enough to 'see through' definitions, so here, even though your goal is `X ⊆ X`, lean will also treat it as if your goal is just `∀ x : ℕ, x ∈ X → x ∈ X`. So `by_def` is useful when you are having trouble keeping track of the definitions in your head, but you don't have to use it."
 
 /--
 If `X, Y : Set A`, then the proposition `X ⊆ Y` or `Subset X Y` is defined as `∀ a : A, a ∈ X → a ∈ Y`. This definition is encoded in the theorem `Set.subset_def`.

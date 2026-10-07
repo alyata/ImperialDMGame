@@ -11,8 +11,8 @@ This time, Lean wants to be convinced that `life_is_beautiful → life_is_beauti
 
 Statement (life_is_beautiful : Prop) : life_is_beautiful → life_is_beautiful := by
   assume panda
-  Hint "Oh? Lean is not convinced! Its responded with another proof obligation. The old obligations are displayed above the current one, for your reference. The new 'Active Goal' looks suspiciously familiar now though... Maybe you can finish this one yourself?"
-  exact panda
+  Hint "Notice that unlike in pen-and-paper-proofs, Lean will just automatically guess the proposition you are assuming. But Lean is still not convinced! Its responded with another proof obligation. The old obligations are displayed above the current one, for your reference. The new 'Active Goal' looks suspiciously familiar now though... Maybe you can finish this one yourself?"
+  by_ass panda
 
 Conclusion "Good job! By the way, you can also write `show_imp panda` as a synonym for `assume panda`."
 

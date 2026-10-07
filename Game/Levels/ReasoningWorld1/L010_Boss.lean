@@ -19,7 +19,7 @@ Statement (A B C D E F G : Prop)
   have cd : C ∧ D  := by use_imp p3, a
   have c : C       := by use_and_L cd
   have d : D       := by use_and_R cd
-  have bb : B → B  := by assume b; exact b
+  have bb : B → B  := by assume b; by_ass b
   have f : F       := by use_imp p4, d
   have ac : A ∧ C  := by show_and a, c
   have bbac : (B → B) ∧ A ∧ C := by show_and bb, ac

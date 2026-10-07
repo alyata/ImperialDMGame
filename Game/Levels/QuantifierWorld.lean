@@ -13,7 +13,7 @@ World "QuantifierWorld"
 Title "Quantifiers and Sets"
 
 Introduction "
-Quantifiers in Lean work slightly differently than in the course: they must specify a *type* to quantify over. In other words, `∀ x, P(x)` is meaningless, only `∀ x : A, P(x)` is a valid proposition.
+Quantifiers in Lean work slightly differently than in the course: they must specify a *type* to quantify over. In other words, `∀ x, P(x)` is meaningless, only `∀ x : A, P(x)` is a valid proposition. These are types in the same sense as you encounter them in Haskell, which makes Lean a close cousin of Haskell (indeed, Lean is also a functional programming language and the proofs in Lean are really functional programs.)
 
 Sets in Lean also respect this typing discipline. There is no type of all sets, but for each type `A` there is a type `set A` of sets which contain elements of `A`.
 

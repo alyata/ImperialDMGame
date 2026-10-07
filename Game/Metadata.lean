@@ -5,6 +5,8 @@ import Game.MySet
 
 -- import Mathlib.Tactic.Common
 
+macro "by_ass" args:term : tactic =>
+  `(tactic| exact $args)
 macro "assume" args:(colGt ident)* : tactic =>
   `(tactic| intro $args*)
 macro "show_imp" args:(colGt ident)* : tactic =>

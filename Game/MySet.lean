@@ -1,4 +1,5 @@
 import Lean
+open Lean PrettyPrinter Delaborator
 
 universe u
 variable {α : Type u}
@@ -13,13 +14,14 @@ def setOf {α : Type u} (p : α → Prop) : Set α :=
 
 /-- Membership in a set -/
 protected def Mem (s : Set α) (a : α) : Prop := s a
-@[inherit_doc] notation:50 a:50 " ∈ " b:50 => Set.Mem b a
-notation:50 a:50 " ∉ " b:50 => ¬ (a ∈ b)
+/-- Use Lean's membership syntax from core -/
+instance : Membership α (Set α) := ⟨fun S x => Set.Mem S x⟩
 
-protected def Subset (s₁ s₂ : Set α) :=
-  ∀ a : α, a ∈ s₁ → a ∈ s₂
-/-- Subset relation: `a ⊆ b`  -/
-infix:50 " ⊆ " => Set.Subset
+/-- Subset relation -/
+protected def Subset (A B : Set α) :=
+  ∀ a : α, a ∈ A → a ∈ B
+/-- Subset notation: `a ⊆ b`  -/
+instance : HasSubset (Set α) := ⟨Set.Subset⟩
 
 public theorem subset_def {s t : Set α} : (s ⊆ t) ↔ ∀ x, x ∈ s → x ∈ t := by
   rfl
@@ -53,8 +55,6 @@ protected def Empty : Set α := fun _ ↦ False
 @[inherit_doc] notation "∅" => Set.Empty
 
 public theorem empty_def {w : α} : w ∉ ∅ := by
-  unfold Set.Mem
-  unfold Set.Empty
   intro f
   exact f
 
@@ -186,5 +186,7 @@ protected def Nonempty (s : Set α) : Prop :=
 
 -- /-- `a ∩ b` is the intersection of`a` and `b`. -/
 -- infixl:70 " ∩ " => Inter.inter
+
+
 
 end Set

@@ -3,22 +3,20 @@ import Game.Metadata
 World "QuantifierWorld"
 Level 1
 
-Title "Using Forall"
+Title "Showing Forall"
 
 Introduction "
-The type of natural numbers is `ℕ`. You can type this symbol with `\\N`. Your goal now is to show that every natural number is equal to itself.
+Inspect the context of the obligation. There is now a type `U` which represents the universe -- it contains every basic object we will ever talk about. For example, if we want to talk about natural numbers then `U` would be `ℕ`.
 
-To show a forall statement, you begin by taking an arbitrary element. To do this in Lean, use the tactic `arbitrary a`.
+Your goal now is to show that every object is equal to itself. To show a forall statement, you begin by taking an arbitrary element. To do this in Lean, use the tactic `arbitrary a`.
 "
 
-Statement : ∀ n : ℕ, n = n := by
+Statement {U : Type} : ∀ x : U, x = x := by
   arbitrary a
   Hint "to show `{a} = {a}`, use the `rfl` theorem. You can read more about it on the right-hand side of this page."
-  exact rfl
+  by_ass rfl
 
 Conclusion "Just like `assume a`, the variable name `a` is up to you. "
-
-/- Use these commands to add items to the game's inventory. -/
 
 /--
 For any `a : A`, the term `rfl : a = a` proves the equality of `a` with itself.

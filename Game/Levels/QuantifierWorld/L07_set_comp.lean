@@ -14,7 +14,7 @@ This definition is encoded in the theorem `Set.comp_def`, so that you can use it
 
 Statement : 343 ∈ { n : ℕ | ∃ p : ℕ, p * 7 = n} := by
   by_def Set.comp_def
-  have h : 49 * 7 = 343 := by exact rfl
+  have h : 49 * 7 = 343 := by by_ass rfl
   show_exists 49, h
 
 /--

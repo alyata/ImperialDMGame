@@ -1,20 +1,22 @@
 import Game.Metadata
 
+open Set
+
 World "QuantifierWorld"
 Level 2
 
 Title "Elements of a Set"
 
 Introduction "
-For any type `A`, a set `X` containing elements of `A` has type `X : Set A`. If `a : A` is an object, then there is a proposition `x ∈ X` which expresses `x` being an element of `X`. To get the symbol `∈`, type `\\in`.
+For any type `U`, a set `X` containing elements of `A` has type `X : Set U`. If `a : A` is an object, then there is a proposition `a ∈ X` which expresses `a` being an element of `X`. To get the symbol `∈`, type `\\in`.
 
-Prove that every element in a set of natural numbers contains itself.
+Prove that every element in a set contains itself.
 "
 
-Statement {X : Set ℕ} : ∀ x : ℕ, x ∈ X → x ∈ X := by
+Statement {U : Type} {X : Set U} : ∀ x ∈ X, x ∈ X := by
   arbitrary a
   assume h
-  exact h
+  by_ass h
 
 Conclusion "Nice!"
 

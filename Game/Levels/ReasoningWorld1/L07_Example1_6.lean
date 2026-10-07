@@ -19,7 +19,7 @@ Hint "Just before you start the proof, your friend leans in with a strange, morb
 Branch
   assume h
   Hint "You realize your friend just really cares about your learning! You buy them a drink and thank them for the tip, but you think you found a better proof without making two assumptions."
-  exact h
+  by_ass h
 assume h p
 Hint "BAD ENDING: You later notice that your friend's face is just a mask, and they must've been replaced by some sort of Discrete Math impostor."
 use_imp h, p

@@ -19,7 +19,7 @@ Statement (wood wood_block stick : Prop) (wood_block_recipe : wood → wood_bloc
 
 Conclusion "MESSAGE FROM DEV: Due to a limitation of the web UI, you will have to write the proof of the intermediate goals in one line, so try to make easily reachable intermediate goals! If you really need to use multiple tactics, use `;` to separate them.
 
-For example, `have pp : P → P := by assume p; exact p`."
+For example, `have pp : P → P := by assume p; by_ass p`."
 
 /-- The tactic `have q : Q := by INSERT_YOUR_PROOF_OF_Q_HERE` introduces a new assumption `q : Q`. Due to a limitation of the web UI, you will have to write the proof of the intermediate goals in one line, so try to make easily reachable intermediate goals!
 -/

@@ -8,7 +8,7 @@ Title "Showing iff"
 Introduction "This level and the next is about working with the connective `↔`, which you can write by typing `\\iff`. To prove `P ↔ Q`, first prove `P → Q` and `Q → P`."
 
 Statement (P : Prop) : P ↔ P := by
-have h : P → P := by assume p; exact p
+have h : P → P := by assume p; by_ass p
 Hint "Great! Now use the `show_iff` tactic to finish it off. You can find out how this tactic works from the right-hand inventory panel."
 show_iff h, h
 

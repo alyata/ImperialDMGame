@@ -13,5 +13,5 @@ World "ReasoningWorld1"
 Title "Propositional Reasoning 1"
 
 Introduction "
-Welcome to Mathematical Reasoning World 1! In this world we learn the basics of proving mathematical statements in Lean via a slice-of-life adventure. Click \"Next →\" to begin!
+Welcome to Mathematical Reasoning World 1! In this world we learn the basics of proving mathematical statements in Lean via a slice-of-life adventure. Click \"Start →\" to begin!
 "
