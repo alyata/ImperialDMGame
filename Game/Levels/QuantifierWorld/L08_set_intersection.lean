@@ -22,7 +22,7 @@ Statement {A : Type} {X Y Z: Set A} : Z ⊆ X ∧ Z ⊆ Y → Z ⊆ X ∩ Y := b
   show_and hx, hy
 
 /--
-If `X, Y : Set A` then `X ∩ Y` is defined as `{ a : A | a ∈ X ∧ a ∈ Y}`. This definition is encoded in the theorem `Set.intersection_def`.
+If `X, Y : Set A` then `X ∩ Y` is defined as `{ a : A | a ∈ X ∧ a ∈ Y}`. This definition is encoded in the theorem `Set.intersection_def`. Write `\inter` to obtain the symbol `∩`.
 -/
 DefinitionDoc Set.Intersection as "Set.Intersection / _ ∩ _" in "Set"
 NewDefinition Set.Intersection

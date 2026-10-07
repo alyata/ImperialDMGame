@@ -26,7 +26,7 @@ Statement {A : Type} {X Y Z: Set A} : X ⊆ Z ∧ Y ⊆ Z → X ∪ Y ⊆ Z := b
   use_imp hyz, hy
 
 /--
-If `X, Y : Set A` then `X ∪ Y` is defined as `{ a : A | a ∈ X ∨ a ∈ Y}`. This definition is encoded in the theorem `Set.union_def`.
+If `X, Y : Set A` then `X ∪ Y` is defined as `{ a : A | a ∈ X ∨ a ∈ Y}`. This definition is encoded in the theorem `Set.union_def`. Write `\union` to obtain the symbol `∪`.
 -/
 DefinitionDoc Set.Union as "Set.Union / _ ∪ _" in "Set"
 NewDefinition Set.Union

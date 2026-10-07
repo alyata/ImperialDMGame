@@ -8,7 +8,7 @@ Title "Complement of Sets"
 Introduction "
 If `X : Set A` then `~ X` contains exactly the elements that are not in `X`. This definition is encoded in the theorem `Set.complement_def`. For this final level, prove one of DeMorgan's equations for sets. For this you will also need to work with equality of sets. The definition of set equality is encoded in the theorem `Set.equals_def` (I will not tell you what it is, you have to check the documentation on the righthand side!)
 
-This proof is more involved than what you've done so far: you will need to `have` intermediate goals within intermediate goals. To do this, you will want to switch from the current \"typewriter mode\" to the \"text editor mode\", which you can access by clicking the `</>` logo on the top right corner.
+This proof is more involved than what you've done so far: you will need to `have` intermediate goals within intermediate goals. To do this, you will want to switch from the current \"typewriter mode\" to the \"text editor mode\", which you can access by clicking the `</>` logo on the top right corner. If the button is greyed out, then you have to return to the world menu and set the rules to \"relaxed\" or \"none\" to allow access to `</>`.
 
 In the text editor mode, you can edit your proof line-by-line as in a text editor. Each line corresponds to one tactic application. If you move the cursor to the end of the line, it shows the \"proof state\" after the tactic is applied. If you move the cursor to the beginning of the line, it shows the \"proof state\" just before the tactic is applied.
 

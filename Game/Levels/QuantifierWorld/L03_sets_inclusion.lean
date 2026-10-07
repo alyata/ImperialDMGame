@@ -20,7 +20,7 @@ Statement {X : Set ℕ} : X ⊆ X := by
 Conclusion "Nice! When writing a pen-and-paper proof, you have to unfold definitions explicitly. But in lean the `by_def` is actually optional because lean is smart enough to 'see through' definitions, so here, even though your goal is `X ⊆ X`, lean will also treat it as if your goal is just `∀ x : ℕ, x ∈ X → x ∈ X`. So `by_def` is useful when you are having trouble keeping track of the definitions in your head, but you don't have to use it."
 
 /--
-If `X, Y : Set A`, then the proposition `X ⊆ Y` or `Subset X Y` is defined as `∀ a : A, a ∈ X → a ∈ Y`. This definition is encoded in the theorem `Set.subset_def`.
+If `X, Y : Set A`, then the proposition `X ⊆ Y` or `Subset X Y` is defined as `∀ a : A, a ∈ X → a ∈ Y`. This definition is encoded in the theorem `Set.subset_def`. Write `\subseteq` or `\ss` to type out the symbol `⊆`.
 -/
 DefinitionDoc «⊆» as "Set.Subset / ⊆" in "Set"
 NewDefinition «⊆»
